@@ -5,7 +5,7 @@ const ferrariWins = [
         contenuto: "Leclerc porta la Ferrari alla vittoria nel GP del Bahrain con una performance dominante.",
         modello: "SF22",
         immagine: "img/f1/leclerc-f1-bahrain-2022.jpg",
-        tags: ["F1", "2022", "Leclerc", "Bahrain"]
+        tags: ["F1", "2022", "leclerc", "bahrain"]
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ const ferrariWins = [
         contenuto: "Leclerc conquista la vittoria ad Albert Park dopo una gara impeccabile.",
         modello: "SF22",
         immagine: "img/f1/leclerc-f1-melbourne-2022.jpg",
-        tags: ["F1", "2022", "Leclerc", "Australia"]
+        tags: ["F1", "2022", "leclerc", "australia"]
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ const ferrariWins = [
         contenuto: "Sainz regala un’ottima prova portando la Ferrari alla vittoria in Gran Bretagna.",
         modello: "SF22",
         immagine: "img/f1/sainz-f1-silverstone-2022.webp",
-        tags: ["F1", "2022", "Sainz", "Silverstone"]
+        tags: ["F1", "2022", "sainz", "silverstone"]
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ const ferrariWins = [
         contenuto: "Leclerc domina austriaco e conquista un’altra vittoria per il Cavallino.",
         modello: "SF22",
         immagine: "img/f1/leclerc-f1-austria-2022.jpg",
-        tags: ["F1", "2022", "Leclerc", "Austria"]
+        tags: ["F1", "2022", "leclerc", "austria"]
     },
     {
         id: 5,
@@ -37,7 +37,7 @@ const ferrariWins = [
         contenuto: "In condizioni di alta umidità e pista insidiosa, Sainz porta la Ferrari al successo.",
         modello: "SF23",
         immagine: "img/f1/sainz-f1-singapore-2023.jpeg",
-        tags: ["F1", "2023", "Sainz", "Singapore"]
+        tags: ["F1", "2023", "sainz", "singapore"]
     },
     {
         id: 6,
@@ -45,7 +45,7 @@ const ferrariWins = [
         contenuto: "Sainz realizza una grande prestazione ad Albert Park e vince con la SF24.",
         modello: "SF24",
         immagine: "img/f1/sainz-f1-melbourne-2024.webp",
-        tags: ["F1", "2024", "Sainz", "Australia"]
+        tags: ["F1", "2024", "sainz", "australia"]
     },
     {
         id: 7,
@@ -53,7 +53,7 @@ const ferrariWins = [
         contenuto: "Leclerc conquista il Principato in una gara magistrale.",
         modello: "SF24",
         immagine: "img/f1/leclerc-f1-monaco-2024.webp",
-        tags: ["F1", "2024", "Leclerc", "Monaco"]
+        tags: ["F1", "2024", "leclerc", "monaco"]
     },
     {
         id: 8,
@@ -61,7 +61,7 @@ const ferrariWins = [
         contenuto: "Davanti ai tifosi di casa a Monza, Leclerc conquista un’emozionante vittoria.",
         modello: "SF24",
         immagine: "img/f1/leclerc-f1-monza-2024.jpg",
-        tags: ["F1", "2024", "Leclerc", "Monza"]
+        tags: ["F1", "2024", "leclerc", "monza"]
     },
     {
         id: 9,
@@ -69,7 +69,7 @@ const ferrariWins = [
         contenuto: "Leclerc domina anche ad Austin e porta a casa un’altra vittoria per la Ferrari.",
         modello: "SF24",
         immagine: "img/f1/leclerc-f1-austin-2024.jpg",
-        tags: ["F1", "2024", "Leclerc", "USA"]
+        tags: ["F1", "2024", "leclerc", "usa"]
     },
     {
         id: 10,
@@ -77,7 +77,7 @@ const ferrariWins = [
         contenuto: "Sainz conquista il successo a Città del Messico, ultima vittoria Ferrari finora.",
         modello: "SF24",
         immagine: "img/f1/sainz-f1-mexico-2024.webp",
-        tags: ["F1", "2024", "Sainz", "Messico"]
+        tags: ["F1", "2024", "sainz", "messico"]
     }
 ];
 

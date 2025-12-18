@@ -4,16 +4,34 @@ import { parse } from "node:path";
 
 //INDEX
 function index(req, res) {
-    const response = {
-        info: {
-            totalWins: ferrariWins.length,
-            leclerWins: driverTotalWin("Leclerc"),
-            sainzWins: driverTotalWin("Sainz"),
-        },
-        results: ferrariWins,
-    }
+    const pilot = req.query.pilot;
+    let response = "";
 
+
+    if (pilot !== undefined) {
+        let filteredFerrariWins = ferrariWins;
+        filteredFerrariWins = ferrariWins.filter((win => win.tags.includes(pilot.toLowerCase())))
+        response = {
+            info: {
+                pilot,
+                totalWins: filteredFerrariWins.length,
+            },
+            results: filteredFerrariWins,
+        }
+    } else {
+        response = {
+            info: {
+                totalWins: ferrariWins.length,
+                leclerWins: driverTotalWin("leclerc"),
+                sainzWins: driverTotalWin("sainz"),
+            },
+            results: ferrariWins,
+        }
+    }
     res.json(response);
+
+
+
 }
 
 //SHOW
