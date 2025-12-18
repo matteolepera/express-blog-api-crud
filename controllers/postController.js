@@ -1,6 +1,7 @@
+import { error } from "node:console";
 import { ferrariWins } from "../data.js";
 
-
+//INDEX
 function index(req, res) {
     const response = {
         info: {
@@ -14,6 +15,33 @@ function index(req, res) {
     res.json(response);
 }
 
+//SHOW
+
+function show(req, res) {
+    const id = parseInt(req.params.id);
+    const win = (ferrariWins.find(win => win.id === id))
+    if (win !== undefined) {
+        res.json(win);
+    } else {
+        res.status(404)
+        res.json({
+            error: "Not found",
+            message: "Vittoria inesistente",
+        })
+    }
+
+}
+
+//STORE
+
+//UPDATE
+
+//MODIFY
+
+//DESTROY
+
+
+//OTHER FUNCTION
 function driverTotalWin(name) {
     let count = 0;
     ferrariWins.forEach(win => {
@@ -29,6 +57,7 @@ function driverTotalWin(name) {
 
 const controller = {
     index,
+    show,
 }
 
 export default controller;

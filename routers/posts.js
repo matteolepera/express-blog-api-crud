@@ -6,11 +6,7 @@ const router = express.Router();
 //INDEX
 router.get("/", (postController.index))
 //SHOW
-router.get("/:id", (req, res) => {
-    // const id = parseInt(req.params.id);
-    // const response = (ferrariWins.find(win => win.id === id))
-    // res.json(response);
-})
+router.get("/:id", (postController.show))
 //STORE
 router.post("/", (req, res) => {
     res.send("Aggiungi una vittoria ferrari")
