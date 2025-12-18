@@ -6,6 +6,36 @@ Esercizio di blog con articoli sulle vittorie della Scuderia Ferrai HP in Formul
 Questa API fornisce contenuti informativi relativi al mondo della Scuderia Ferrai HP in Formula 1, permettendo di consultare le vittorie consecuite dal 2022 al 2025.
 Ogni articolo rappresenta la vittoria di quel determinato Gran Premio, includendo dettagli come pilota, stagione, tracciato e vettura utilizzata.
 
+### 🏆 Ottieni tutte le vittorie:
+Restituisce tutte le vittorie disponibili.
+
+#### Esempio:
+`GET http://localhost:4416/posts`
+```json
+{
+    "info": {
+        "totalWins": 10,
+        "leclerWins": 6,
+        "sainzWins": 4
+    },
+    "results": [
+        {
+            "id": 1,
+            "titolo": "Charles Leclerc vince il GP del Bahrain 2022",
+            "contenuto": "Leclerc porta la Ferrari alla vittoria nel GP del Bahrain con una performance dominante.",
+            "modello": "SF22",
+            "immagine": "img/f1/leclerc-f1-bahrain-2022.jpg",
+            "tags": [
+                "F1",
+                "2022",
+                "leclerc",
+                "bahrain"
+            ]
+        }
+    ]
+}
+```
+
 ### 🔍 Filtri disponibili:
 
 L’API supporta diversi parametri di filtro per affinare la ricerca dei contenuti.
@@ -20,7 +50,10 @@ Permette di ottenere le vittorie relative a uno specifico pilota.
 Restituisce tutte le vittorie in cui il pilota indicato è protagonista del Gran Premio.
 
 #### Esempio:
-....
+`GET https//testapi/test`
+```json
+contenuto
+```
 
 ### 🏁 Filtro per tracciato:
 Consente per visualizzare le vittorie associate a uno specifico circuito.
@@ -29,7 +62,10 @@ Consente per visualizzare le vittorie associate a uno specifico circuito.
 Restituisce le vittorie relative ai Gran Premi disputati sul tracciato indicato.
 
 #### Esempio:
-....
+`GET https//testapi/test`
+```json
+contenuto
+```
 
 ### 📅 Filtro per stagione:
 Consente di filtrare le vittorie in base alla stagione di Formula 1.
@@ -37,4 +73,7 @@ Consente di filtrare le vittorie in base alla stagione di Formula 1.
 #### Descrizione:
 Restituisce tutte le vittorie relative all’anno selezionato.
 #### Esempio:
-....
+`GET https//testapi/test`
+```json
+contenuto
+```
