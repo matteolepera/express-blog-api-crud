@@ -51,8 +51,17 @@ function modify(req, res) {
 function destroy(req, res) {
     const id = parseInt(req.params.id)
     const index = (ferrariWins.findIndex(win => win.id === id))
-    ferrariWins.splice(index, 1)
-    res.send(index)
+    if (index === -1) {
+        res.status(404)
+        res.json({
+            error: "Not found",
+            message: "Vittoria inesistente"
+        })
+    }
+    else {
+        ferrariWins.splice(index, 1)
+        res.sendStatus(204)
+    }
 }
 
 //OTHER FUNCTION
