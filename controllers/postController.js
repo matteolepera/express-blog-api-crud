@@ -5,19 +5,17 @@ import { parse } from "node:path";
 //INDEX
 function index(req, res) {
     const pilot = req.query.pilot;
+    const track = req.query.track;
+    const season = req.query.season;
     let response = "";
 
 
     if (pilot !== undefined) {
-        let filteredFerrariWins = ferrariWins;
-        filteredFerrariWins = ferrariWins.filter((win => win.tags.includes(pilot.toLowerCase())))
-        response = {
-            info: {
-                pilot,
-                totalWins: filteredFerrariWins.length,
-            },
-            results: filteredFerrariWins,
-        }
+        response = filterCategory("pilot", pilot)
+    } else if (track !== undefined) {
+        response = filterCategory("track", track)
+    } else if (season !== undefined) {
+        response = filterCategory("season", season)
     } else {
         response = {
             info: {
@@ -93,6 +91,21 @@ function driverTotalWin(name) {
         })
     })
     return count;
+}
+
+function filterCategory(type, value) {
+    let response = "";
+    let filteredFerrariWins = ferrariWins;
+    filteredFerrariWins = ferrariWins.filter((win => win.tags.includes(value.toLowerCase())))
+    response = {
+        info: {
+            category: type,
+            name: value,
+            totalWins: filteredFerrariWins.length,
+        },
+        results: filteredFerrariWins,
+    }
+    return response;
 }
 
 
