@@ -33,7 +33,9 @@ function show(req, res) {
 }
 
 //STORE
-
+function store(req, res) {
+    res.send("Aggiungi una vittoria ferrari")
+}
 //UPDATE
 
 //MODIFY
@@ -58,6 +60,7 @@ function driverTotalWin(name) {
 const controller = {
     index,
     show,
+    store,
 }
 
 export default controller;

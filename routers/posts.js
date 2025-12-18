@@ -8,9 +8,7 @@ router.get("/", (postController.index))
 //SHOW
 router.get("/:id", (postController.show))
 //STORE
-router.post("/", (req, res) => {
-    res.send("Aggiungi una vittoria ferrari")
-})
+router.post("/", (postController.store))
 //UPDATE
 router.put("/:id", (req, res) => {
     res.send("Modifica una vittoria ferrari")
