@@ -1,5 +1,6 @@
 import { error } from "node:console";
 import { ferrariWins } from "../data.js";
+import { parse } from "node:path";
 
 //INDEX
 function index(req, res) {
@@ -48,7 +49,10 @@ function modify(req, res) {
 }
 //DESTROY
 function destroy(req, res) {
-    res.send("Elimina una vittoria ferrari")
+    const id = parseInt(req.params.id)
+    const index = (ferrariWins.findIndex(win => win.id === id))
+    ferrariWins.splice(index, 1)
+    res.send(index)
 }
 
 //OTHER FUNCTION
