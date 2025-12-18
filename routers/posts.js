@@ -14,9 +14,7 @@ router.put("/:id", (postController.update))
 //MODIFY
 router.patch("/:id", (postController.modify))
 //DESTROY
-router.delete("/:id", (req, res) => {
-    res.send("Elimina una vittoria ferrari")
-})
+router.delete("/:id", (postController.destroy))
 
 
 export default router;

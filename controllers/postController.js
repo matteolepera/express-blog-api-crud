@@ -47,7 +47,9 @@ function modify(req, res) {
     res.send("Modifica dettagli di una vittoria ferrari")
 }
 //DESTROY
-
+function destroy(req, res) {
+    res.send("Elimina una vittoria ferrari")
+}
 
 //OTHER FUNCTION
 function driverTotalWin(name) {
@@ -69,7 +71,7 @@ const controller = {
     store,
     update,
     modify,
-
+    destroy,
 }
 
 export default controller;
