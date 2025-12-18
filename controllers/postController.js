@@ -43,7 +43,9 @@ function update(req, res) {
 }
 
 //MODIFY
-
+function modify(req, res) {
+    res.send("Modifica dettagli di una vittoria ferrari")
+}
 //DESTROY
 
 
@@ -66,6 +68,7 @@ const controller = {
     show,
     store,
     update,
+    modify,
 
 }
 

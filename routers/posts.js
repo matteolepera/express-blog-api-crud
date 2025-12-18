@@ -12,9 +12,7 @@ router.post("/", (postController.store))
 //UPDATE
 router.put("/:id", (postController.update))
 //MODIFY
-router.patch("/:id", (req, res) => {
-    res.send("Modifica dettagli di una vittoria ferrari")
-})
+router.patch("/:id", (postController.modify))
 //DESTROY
 router.delete("/:id", (req, res) => {
     res.send("Elimina una vittoria ferrari")
