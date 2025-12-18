@@ -2,6 +2,12 @@
 Esercizio di blog con articoli sulle vittorie della Scuderia Ferrai HP in Formula 1.
 
 ## 🐝 API
+Operazioni implementate:
+- [Vai all'index ☝🏻](#-index)
+- [Vai allo show 👁️](#-show)
+- [Vai al destroy 🗑️](#-destroy)
+
+## ☝🏻 INDEX
 ### 🍯 Descrizione:
 Questa API fornisce contenuti informativi relativi al mondo della Scuderia Ferrai HP in Formula 1, permettendo di consultare le vittorie consecuite dal 2022 al 2025.
 Ogni articolo rappresenta la vittoria di quel determinato Gran Premio, includendo dettagli come pilota, stagione, tracciato e vettura utilizzata.
@@ -140,4 +146,50 @@ Restituisce tutte le vittorie relative all’anno selezionato.
     ]
 }
 
+```
+
+## 👁️ SHOW
+### 🥇 Mostra una singola vittoria:
+Permette di ottenere i dettagli di una specifica vittoria tramite l’ID del post.
+
+#### Esempio:
+`GET http://localhost:4416/posts/2`
+```json
+{
+"id": 1,
+    "titolo": "Charles Leclerc vince il GP del Bahrain 2022",
+    "contenuto": "Leclerc porta la Ferrari alla vittoria nel GP del Bahrain con una performance dominante.",
+    "modello": "SF22",
+    "immagine": "img/f1/leclerc-f1-bahrain-2022.jpg",
+    "tags": [
+        "F1",
+        "2022",
+        "leclerc",
+        "bahrain"
+    ]
+}
+```
+
+## 🗑️ DESTROY
+### 🚫 Eliminazione di una vittoria:
+Permette di eliminare un post specifico tramite l’ID.
+
+#### Esempio:
+`DELETE http://localhost:4416/posts/1` `204 No Content`
+```json
+{
+}
+```
+
+## ⚠️ Gestione errori
+### 💬 Messaggio di errore:
+In caso di errore (ID non trovato, parametri errati, ecc.), l’API restituisce un messaggio chiaro.
+
+### Esempio:
+`404 Not Found`
+```json
+    {
+    "error": "Not found",
+    "message": "Vittoria inesistente"
+    }
 ```
