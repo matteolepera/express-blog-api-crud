@@ -10,9 +10,7 @@ router.get("/:id", (postController.show))
 //STORE
 router.post("/", (postController.store))
 //UPDATE
-router.put("/:id", (req, res) => {
-    res.send("Modifica una vittoria ferrari")
-})
+router.put("/:id", (postController.update))
 //MODIFY
 router.patch("/:id", (req, res) => {
     res.send("Modifica dettagli di una vittoria ferrari")

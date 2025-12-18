@@ -38,6 +38,10 @@ function store(req, res) {
 }
 //UPDATE
 
+function update(req, res) {
+    res.send("Modifica una vittoria ferrari")
+}
+
 //MODIFY
 
 //DESTROY
@@ -61,6 +65,8 @@ const controller = {
     index,
     show,
     store,
+    update,
+
 }
 
 export default controller;
