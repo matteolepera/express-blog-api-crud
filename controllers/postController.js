@@ -64,8 +64,20 @@ function store(req, res) {
         immagine: data.immagine,
         tags: [data.tags]
     }
-    ferrariWins.push(newWin);
-    console.log(newWin);
+
+    if (!data.titolo || data.titolo === "") {
+        res.status(400)
+        res.json({
+            error: "Bad Request",
+            message: "Inserisci un titolo",
+        })
+    } else {
+        ferrariWins.push(newWin);
+        res.status(201)
+        res.json(newWin)
+    }
+
+    // console.log(newWin);
     // res.send("Aggiungi una vittoria ferrari")
 }
 //UPDATE
