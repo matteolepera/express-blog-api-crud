@@ -1,4 +1,4 @@
-import { error } from "node:console";
+import { error, log } from "node:console";
 import { ferrariWins } from "../data.js";
 import { parse } from "node:path";
 
@@ -51,7 +51,22 @@ function show(req, res) {
 
 //STORE
 function store(req, res) {
-    res.send("Aggiungi una vittoria ferrari")
+    const data = req.body;
+    const newId = ferrariWins[ferrariWins.length - 1].id + 1;
+    // console.log(id);
+
+    const newWin = {
+
+        id: newId,
+        titolo: data.titolo,
+        contenuto: data.contenuto,
+        modello: data.modello,
+        immagine: data.immagine,
+        tags: [data.tags]
+    }
+    ferrariWins.push(newWin);
+    console.log(newWin);
+    // res.send("Aggiungi una vittoria ferrari")
 }
 //UPDATE
 
