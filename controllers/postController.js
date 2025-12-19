@@ -83,6 +83,9 @@ function store(req, res) {
 //UPDATE
 
 function update(req, res) {
+    const id = parseInt(req.params.id)
+    const win = ferrariWins.find((win => win.id === id))
+    console.log(id);
     res.send("Modifica una vittoria ferrari")
 }
 
