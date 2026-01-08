@@ -94,9 +94,9 @@ function update(req, res) {
     win.tags = data.tags;
 
     // console.log(id);
-    console.log(ferrariWins);
+    // console.log(ferrariWins);
 
-    res.send("Modifica una vittoria ferrari")
+    res.json(win)
 }
 
 //MODIFY
